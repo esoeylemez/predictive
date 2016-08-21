@@ -1,4 +1,4 @@
-SKELETON
+predictive
 ========
 
 Copyright 2016 Ertugrul Söylemez

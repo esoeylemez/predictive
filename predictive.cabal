@@ -12,7 +12,7 @@
 -- See the License for the specific language governing permissions and
 -- limitations under the License.
 
-name:     SKELETON
+name:     predictive
 version:  0.1.0
 category: 
 synopsis: 
@@ -20,8 +20,8 @@ synopsis:
 maintainer:   Ertugrul Söylemez <esz@posteo.de>
 author:       Ertugrul Söylemez <esz@posteo.de>
 copyright:    Copyright 2016 Ertugrul Söylemez
-homepage:     https://github.com/esoeylemez/SKELETON
-bug-reports:  https://github.com/esoeylemez/SKELETON/issues
+homepage:     https://github.com/esoeylemez/predictive
+bug-reports:  https://github.com/esoeylemez/predictive/issues
 license:      Apache
 license-file: LICENSE
 
@@ -33,7 +33,7 @@ extra-source-files: NOTICE README.md
 
 source-repository head
     type:     git
-    location: https://github.com/esoeylemez/SKELETON.git
+    location: https://github.com/esoeylemez/predictive.git
 
 flag Devel
     default: False
@@ -55,20 +55,20 @@ library
     ghc-options: -W -fdefer-typed-holes
     exposed-modules:
 
-executable SKELETON
+executable predictive
     build-depends:
         base                >= 4.8  && < 5,
-        SKELETON
+        predictive
     default-language: Haskell2010
     ghc-options: -W -threaded -fdefer-typed-holes
     hs-source-dirs: programs
-    main-is: SKELETON.hs
+    main-is: predictive.hs
 
-executable SKELETON-experiment
+executable predictive-experiment
     if flag(examples)
         build-depends:
             base >= 4.8 && < 5,
-            SKELETON
+            predictive
     else
         buildable: False
     default-language: Haskell2010
@@ -83,7 +83,7 @@ test-suite tests
         smallcheck,
         tasty,
         tasty-smallcheck,
-        SKELETON
+        predictive
     default-language: Haskell2010
     ghc-options: -W -threaded -with-rtsopts=-N -fdefer-typed-holes
     hs-source-dirs: tests
