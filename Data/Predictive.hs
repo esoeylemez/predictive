@@ -47,6 +47,10 @@ import qualified Data.Sequence as Seq
 -- deltas arrive they are reconciled with the pending local deltas.
 
 data Predictor d s =
+    -- | Warning: If you use the constructor directly, keep in mind that
+    -- for efficiency reasons this library operates under the assumption
+    -- that the second tuple components of the '_predPending' field are
+    -- the predicted states as produced by the corresponding delta.
     Predictor {
       _predAgree   :: d -> d -> Bool,  -- ^ Do the deltas agree?
       _predApply   :: d -> s -> s,     -- ^ Effect of a delta on the state.
