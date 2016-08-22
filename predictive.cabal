@@ -57,15 +57,15 @@ library
     exposed-modules:
         Data.Predictive
 
-test-suite tests
-    type: exitcode-stdio-1.0
-    build-depends:
-        base                >= 4.8 && < 5,
-        smallcheck,
-        tasty,
-        tasty-smallcheck,
-        predictive
-    default-language: Haskell2010
-    ghc-options: -W -threaded -with-rtsopts=-N -fdefer-typed-holes
-    hs-source-dirs: tests
-    main-is: Props.hs
+-- test-suite tests
+--     type: exitcode-stdio-1.0
+--     build-depends:
+--         base                >= 4.8 && < 5,
+--         smallcheck,
+--         tasty,
+--         tasty-smallcheck,
+--         predictive
+--     default-language: Haskell2010
+--     ghc-options: -W -threaded -with-rtsopts=-N -fdefer-typed-holes
+--     hs-source-dirs: tests
+--     main-is: Props.hs
