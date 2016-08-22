@@ -27,7 +27,7 @@ description:  This is a library for predictive scans.  Its aim is to
 
 build-type:         Simple
 cabal-version:      >= 1.10
-extra-source-files: NOTICE README.md
+extra-source-files: CHANGELOG.md README.md
 
 source-repository head
     type:     git
