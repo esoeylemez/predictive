@@ -47,23 +47,11 @@ source-repository head
     type:     git
     location: https://github.com/esoeylemez/predictive.git
 
-flag Devel
-    default: False
-    description: Development dependencies
-    manual: True
-
-flag Examples
-    default: False
-    description: Build the example programs
-    manual: True
-
 
 library
     build-depends:
         base                >= 4.8 && < 5,
         containers          >= 0.5 && < 1
-    if flag(devel)
-        build-depends: rapid
     default-language: Haskell2010
     ghc-options: -W -fdefer-typed-holes
     exposed-modules:
